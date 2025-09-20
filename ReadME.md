@@ -14,7 +14,7 @@ This project is designed to be flexible, extensible, and easy to maintain — ne
 ### Installation
 Clone the repository and install dependencies:
 
-```bash
+
 git clone <repository-url>
 cd assessment-system
 npm install
