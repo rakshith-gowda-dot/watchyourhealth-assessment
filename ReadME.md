@@ -15,24 +15,23 @@ This project is designed to be flexible, extensible, and easy to maintain — ne
 Clone the repository and install dependencies:
 
 ```bash
-git clone <repository-url>
-cd assessment-system
-npm install
-Run Development Server
-bash
-Copy code
-npm start
-Configuration Files
-config/assessments.js
-Defines assessment types, metadata, score ranges, and interpretation rules.
+###git clone <repository-url>
+###cd assessment-system
+###npm install
+###Run Development Server
 
-config/sections.js
+###npm start
+###Configuration Files
+##config/assessments.js
+###Defines assessment types, metadata, score ranges, and interpretation rules.
+
+###config/sections.js
 Maps assessment types to fields, validation rules, and calculation formulas.
 
-Adding New Assessment Types
+###Adding New Assessment Types
 Step 1: Define the Assessment
-javascript
-Copy code
+
+
 // config/assessments.js
 const assessmentTypes = {
   NEW_ASSESSMENT: {
@@ -48,9 +47,9 @@ const assessmentTypes = {
     }
   }
 };
-Step 2: Create Section Configuration
-javascript
-Copy code
+##Step 2: Create Section Configuration
+
+
 // config/sections.js
 const sectionConfig = {
   new_assessment: {
@@ -69,11 +68,10 @@ const sectionConfig = {
     }
   }
 };
-Modifying Field Mappings
-Update existing fields or add new ones:
+###Modifying Field Mappings
+###Update existing fields or add new ones:
 
-javascript
-Copy code
+
 // config/sections.js
 const sectionConfig = {
   moca: {
@@ -103,9 +101,8 @@ const sectionConfig = {
     }
   }
 };
-Updating Classification Ranges
-javascript
-Copy code
+###Updating Classification Ranges
+
 // config/assessments.js
 const assessmentTypes = {
   MOCA: {
@@ -122,9 +119,8 @@ const assessmentTypes = {
     }
   }
 };
-Data Structure (Session ID Based)
-javascript
-Copy code
+###Data Structure (Session ID Based)
+
 // data/data.js
 const sampleData = {
   patients: [{ id: 'PAT-000001', name: 'John Doe', date_of_birth: '1950-05-15', gender: 'male' }],
@@ -137,7 +133,7 @@ const sampleData = {
     interpretation: 'normal'
   }]
 };
-Query Examples
+###Query Examples
 javascript
 Copy code
 function getAssessmentsBySession(sessionId) {
