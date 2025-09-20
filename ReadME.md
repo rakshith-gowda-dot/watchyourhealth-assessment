@@ -15,20 +15,20 @@ This project is designed to be flexible, extensible, and easy to maintain — ne
 Clone the repository and install dependencies:
 
 ```bash
-###git clone <repository-url>
-###cd assessment-system
-###npm install
-###Run Development Server
+git clone <repository-url>
+cd assessment-system
+npm install
+Run Development Server
 
-###npm start
-###Configuration Files
-##config/assessments.js
-###Defines assessment types, metadata, score ranges, and interpretation rules.
+npm start
+Configuration Files
+config/assessments.js
+Defines assessment types, metadata, score ranges, and interpretation rules.
 
-###config/sections.js
+config/sections.js
 Maps assessment types to fields, validation rules, and calculation formulas.
 
-###Adding New Assessment Types
+Adding New Assessment Types
 Step 1: Define the Assessment
 
 
@@ -68,8 +68,8 @@ const sectionConfig = {
     }
   }
 };
-###Modifying Field Mappings
-###Update existing fields or add new ones:
+Modifying Field Mappings
+Update existing fields or add new ones:
 
 
 // config/sections.js
@@ -101,7 +101,7 @@ const sectionConfig = {
     }
   }
 };
-###Updating Classification Ranges
+Updating Classification Ranges
 
 // config/assessments.js
 const assessmentTypes = {
@@ -119,7 +119,7 @@ const assessmentTypes = {
     }
   }
 };
-###Data Structure (Session ID Based)
+Data Structure (Session ID Based)
 
 // data/data.js
 const sampleData = {
@@ -133,7 +133,7 @@ const sampleData = {
     interpretation: 'normal'
   }]
 };
-###Query Examples
+Query Examples
 javascript
 Copy code
 function getAssessmentsBySession(sessionId) {
