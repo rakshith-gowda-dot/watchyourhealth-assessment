@@ -31,11 +31,12 @@ Defines assessment types, metadata, score ranges, and interpretation rules.
 config/sections.js
 Maps assessment types to fields, validation rules, and calculation formulas.
 
-Adding New Assessment Types
-Step 1: Define the Assessment
+##Adding New Assessment Types
+###Step 1: Define the Assessment
 javascript
-Copy code
+
 // config/assessments.js
+```bash
 const assessmentTypes = {
   NEW_ASSESSMENT: {
     id: 'new_assessment',
@@ -50,9 +51,10 @@ const assessmentTypes = {
     }
   }
 };
+```
 Step 2: Create Section Configuration
 javascript
-Copy code
+```
 // config/sections.js
 const sectionConfig = {
   new_assessment: {
@@ -71,11 +73,12 @@ const sectionConfig = {
     }
   }
 };
+```
 Modifying Field Mappings
 Update existing fields or add new ones:
 
 javascript
-Copy code
+```
 // config/sections.js
 const sectionConfig = {
   moca: {
@@ -105,9 +108,11 @@ const sectionConfig = {
     }
   }
 };
-Updating Classification Ranges
+
+```
+### Updating Classification Ranges
 javascript
-Copy code
+```
 // config/assessments.js
 const assessmentTypes = {
   MOCA: {
@@ -124,9 +129,10 @@ const assessmentTypes = {
     }
   }
 };
-Data Structure (Session ID Based)
+```
+### Data Structure (Session ID Based)
 javascript
-Copy code
+```
 // data/data.js
 const sampleData = {
   patients: [{ id: 'PAT-000001', name: 'John Doe', date_of_birth: '1950-05-15', gender: 'male' }],
@@ -139,9 +145,9 @@ const sampleData = {
     interpretation: 'normal'
   }]
 };
+```
 Query Examples
-javascript
-Copy code
+```
 function getAssessmentsBySession(sessionId) {
   return sampleData.assessments.filter(a => a.session_id === sessionId);
 }
@@ -154,3 +160,4 @@ function getPatientBySession(sessionId) {
 function getSessionsByPatient(patientId) {
   return sampleData.sessions.filter(s => s.patient_id === patientId);
 }
+```
